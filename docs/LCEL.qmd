@@ -1,0 +1,105 @@
+---
+title: "LCEL"
+format: html
+editor: visual
+jupyter: python3
+editor_options: 
+  chunk_output_type: inline
+---
+
+## 准备
+
+### langchain环境准备
+
+```{sh}
+pip install python_dotenv
+pip install langchain
+pip install langchain-community
+pip install langchain-core
+pip install langchain-experimental
+pip install langchain_openai
+pip install "langchain[docarray]"
+```
+
+```{python}
+# 加载 .env 到环境变量
+import os
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv(), override=True)
+```
+
+### LCEL说明（翻译原文）
+
+LangChain 表达式语言（LCEL）是一种轻松地将链组合在一起的声明性方式。 LCEL 从第一天起就被设计为支持将原型投入生产，无需更改代码，从最简单的“提示 + LLM”链到最复杂的链（我们已经看到人们在生产中成功运行了 100 个步骤的 LCEL 链）。
+
+强调一下您可能想要使用 LCEL 的一些原因：
+
+-   流支持当您使用 LCEL 构建链时，您可以获得最佳的首次代币时间（直到第一个输出块出现之前经过的时间）。 对于某些连锁店来说，这意味着例如。 我们将令牌直接从 LLM 流式传输到流式输出解析器，然后您会以与 LLM 提供者输出原始令牌相同的速率返回已解析的增量输出块。
+
+-   异步支持使用 LCEL 构建的任何链都可以使用同步 API（例如，在原型设计时在 Jupyter 笔记本中）和异步 API（例如，在 LangServe 服务器中）进行调用。 这使得能够在原型和生产中使用相同的代码，具有出色的性能，并且能够在同一服务器中处理许多并发请求。
+
+-   优化的并行执行 只要您的 LCEL 链具有可以并行执行的步骤（例如，如果您从多个检索器获取文档），我们就会在同步和异步接口中自动执行此操作，以尽可能减少延迟。
+
+-   重试和回退 为 LCEL 链的任何部分配置重试和回退。 这是让您的链条在规模上更加可靠的好方法。 我们目前正在努力添加对重试/回退的流支持，以便您可以获得更高的可靠性，而无需任何延迟成本。
+
+-   访问中间结果对于更复杂的链，即使在生成最终输出之前访问中间步骤的结果通常也非常有用。 这可以用来让最终用户知道正在发生的事情，甚至只是为了调试您的链。 您可以流式传输中间结果，并且它在每个 LangServe 服务器上都可用。
+
+-   输入和输出模式 输入和输出模式为每个 LCEL 链提供从链结构推断出的 Pydantic 和 JSONSchema 模式。 这可用于验证输入和输出，并且是 LangServe 的组成部分。
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## 例子
+
+### 基本例子
+
+```{python}
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_openai import ChatOpenAI
+
+prompt = ChatPromptTemplate.from_template("讲一个关于{topic}的中国式笑话")
+model = ChatOpenAI(model="gpt-3.5-turbo-1106")
+output_parser = StrOutputParser()
+
+chain = prompt | model | output_parser
+
+chain.invoke({"topic": "足球"})
+```
+
+### RAG例子
+
+```{sh}
+pip install "langchain[docarray]"
+pip install "langserve[client]"
+```
+
+```{python}
+from langchain_community.vectorstores import DocArrayInMemorySearch
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.runnables import RunnableParallel, RunnablePassthrough
+from langchain_openai.chat_models import ChatOpenAI
+from langchain_openai.embeddings import OpenAIEmbeddings
+
+vectorstore = DocArrayInMemorySearch.from_texts(
+    ["harrison worked at kensho", "bears like to eat honey"],
+    embedding=OpenAIEmbeddings(),
+)
+retriever = vectorstore.as_retriever()
+
+template = """Answer the question based only on the following context:
+{context}
+
+Question: {question}
+"""
+prompt = ChatPromptTemplate.from_template(template)
+model = ChatOpenAI()
+output_parser = StrOutputParser()
+
+setup_and_retrieval = RunnableParallel(
+    {"context": retriever, "question": RunnablePassthrough()}
+)
+chain = setup_and_retrieval | prompt | model | output_parser
+
+chain.invoke("where did harrison work?")
+```
