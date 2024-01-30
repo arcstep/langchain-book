@@ -4,3 +4,11 @@ from .Client import (
   tongyi,
   chatglm,
 )
+
+from .Parser import (
+  langchain_docs_extractor
+)
+
+from .WebPage import (
+  WebPageObj
+)
