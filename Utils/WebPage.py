@@ -16,8 +16,8 @@ class WebPage(BaseModel):
   tags: str = ''
   summary: str = ''
 
-class WebPageObj:
-  def __init__(self, db_name='data/web_pages.db'):
+class WebPageDataset:
+  def __init__(self, db_name='data/default.db'):
     self.conn = duckdb.connect(db_name)   
     # 创建表格，设置source字段为主键
     self.conn.execute("""
@@ -51,24 +51,24 @@ class WebPageObj:
         'priority': data.metadata.get('priority', ""),
         'page_content': data.page_content
       }
-    web_page = WebPage(**data)
+    d = WebPage(**data)
     self.conn.execute("""
       INSERT OR REPLACE INTO web_pages 
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
       """, 
       (
-        web_page.source, 
-        web_page.topic, 
-        web_page.title, 
-        web_page.description, 
-        web_page.language, 
-        web_page.loc, 
-        web_page.changefreq, 
-        web_page.priority, 
-        web_page.page_content,
-        web_page.timestamp,
-        web_page.tags,
-        web_page.summary        
+        d.source, 
+        d.topic, 
+        d.title, 
+        d.description, 
+        d.language, 
+        d.loc, 
+        d.changefreq, 
+        d.priority, 
+        d.page_content,
+        d.timestamp,
+        d.tags,
+        d.summary        
       )
     )
 
