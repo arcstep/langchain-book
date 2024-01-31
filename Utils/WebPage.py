@@ -83,39 +83,29 @@ class WebPageObj:
     )
 
   # 从duckdb加载数据到内存
-  def read_data(self, topic):
-    result = self.conn.execute("""
-    SELECT
-      source,
-      topic,
-      title,
-      description,
-      language,
-      loc,
-      changefreq,
-      priority,
-      page_content,
-      timestamp,
-      tags,
-      summary
-    FROM web_pages
-    WHERE topic=?
-    """, (topic,))
-    web_pages = []
-    for row in result.fetchall():
-      loaded_web_page = WebPage(
-        source=row[0],
-        topic=row[1],
-        title=row[2],
-        description=row[3],
-        language=row[4],
-        loc=row[5],
-        changefreq=row[6],
-        priority=row[7],
-        page_content=row[8],
-        timestamp=row[9],
-        tags=row[10],
-        summary=row[11]
-      )
-      web_pages.append(loaded_web_page)
+  def read_data(self, topic=None):
+    query = """
+      SELECT
+        source,
+        topic,
+        title,
+        description,
+        language,
+        loc,
+        changefreq,
+        priority,
+        page_content,
+        timestamp,
+        tags,
+        summary
+      FROM web_pages
+    """
+    if topic is not None:
+        query += " WHERE topic=?"
+        result = self.conn.execute(query, (topic,))
+    else:
+        result = self.conn.execute(query)
+    
+    columns = [column[0] for column in result.description]
+    web_pages = [WebPage(**dict(zip(columns, row))) for row in result.fetchall()]
     return web_pages
