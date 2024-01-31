@@ -1,6 +1,7 @@
 import duckdb
 from pydantic import BaseModel
 from datetime import datetime
+from pydantic import Field
 
 class WebPage(BaseModel):
   source: str
@@ -12,7 +13,7 @@ class WebPage(BaseModel):
   changefreq: str = ''
   priority: str = ''
   page_content: str = ''
-  timestamp: datetime = datetime.now()
+  timestamp: datetime = Field(default_factory=datetime.now)
   tags: str = ''
   summary: str = ''
 
