@@ -10,7 +10,11 @@ from .Parser import (
 )
 
 from .WebPage import (
-  WebPageObj
+  WebPageDataset
+)
+
+from .TextBlock import (
+  TextBlockDataset
 )
 
 from .Text import (
