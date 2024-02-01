@@ -29,6 +29,8 @@ nest-asyncio = "^1.6.0"
 defusedxml = "^0.7.1"
 duckdb = {path = "duckdb-0.9.2-cp310-cp310-macosx_10_9_universal2.whl"}
 sentence-transformers = "^2.3.1"
+langfuse = "^2.7.3"
+dashscope = "^1.14.1"
 
 [build-system]
 requires = ["poetry-core"]
