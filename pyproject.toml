@@ -32,6 +32,7 @@ sentence-transformers = "^2.3.1"
 langfuse = "^2.7.3"
 dashscope = "^1.14.1"
 emoji = "^2.10.1"
+grandalf = "^0.8"
 
 [build-system]
 requires = ["poetry-core"]
