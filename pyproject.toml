@@ -33,6 +33,9 @@ langfuse = "^2.7.3"
 dashscope = "^1.14.1"
 emoji = "^2.10.1"
 grandalf = "^0.8"
+langchain-cli = "^0.0.21"
+duckdb-engine = "^0.11.1"
+langchainhub = "^0.1.14"
 
 [build-system]
 requires = ["poetry-core"]
