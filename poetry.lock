@@ -4173,6 +4173,23 @@ plugins = ["importlib-metadata"]
 windows-terminal = ["colorama (>=0.4.6)"]
 
 [[package]]
+name = "pyjwt"
+version = "2.8.0"
+description = "JSON Web Token implementation in Python"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "PyJWT-2.8.0-py3-none-any.whl", hash = "sha256:59127c392cc44c2da5bb3192169a91f429924e17aff6534d70fdc02ab3e04320"},
+    {file = "PyJWT-2.8.0.tar.gz", hash = "sha256:57e28d156e3d5c10088e0c68abb90bfac3df82b40a71bd0daa20c65ccd5c23de"},
+]
+
+[package.extras]
+crypto = ["cryptography (>=3.4.0)"]
+dev = ["coverage[toml] (==5.0.4)", "cryptography (>=3.4.0)", "pre-commit", "pytest (>=6.0.0,<7.0.0)", "sphinx (>=4.5.0,<5.0.0)", "sphinx-rtd-theme", "zope.interface"]
+docs = ["sphinx (>=4.5.0,<5.0.0)", "sphinx-rtd-theme", "zope.interface"]
+tests = ["coverage[toml] (==5.0.4)", "pytest (>=6.0.0,<7.0.0)"]
+
+[[package]]
 name = "pylance"
 version = "0.9.7"
 description = "python wrapper for Lance columnar format"
@@ -6518,6 +6535,23 @@ idna = ">=2.0"
 multidict = ">=4.0"
 
 [[package]]
+name = "zhipuai"
+version = "2.0.1"
+description = "A SDK library for accessing big model apis from ZhipuAI"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "zhipuai-2.0.1-py3-none-any.whl", hash = "sha256:738033d95696c3d5117dc4487e37d924e3ebbcdfa0072812b3f63a08ff72274a"},
+    {file = "zhipuai-2.0.1.tar.gz", hash = "sha256:297bbdbe9393da2d1dc8066c39cf39bb2342f170d86f2b7b7a13ba368c53d701"},
+]
+
+[package.dependencies]
+cachetools = ">=4.2.2"
+httpx = ">=0.23.0"
+pydantic = ">=2.5.2"
+pyjwt = ">=2.8.0,<2.9.0"
+
+[[package]]
 name = "zipp"
 version = "3.17.0"
 description = "Backport of pathlib-compatible object wrapper for zip files"
@@ -6535,4 +6569,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "a5656c3b4ddf2acf1aff556e28768ecb526c3f8310312985bcccf684aba63f11"
+content-hash = "39c73866d52bb5413903bc69067579d286dce4847e8950a6b2c1b186d079b35d"

@@ -36,6 +36,7 @@ grandalf = "^0.8"
 langchain-cli = "^0.0.21"
 duckdb-engine = "^0.11.1"
 langchainhub = "^0.1.14"
+zhipuai = "^2.0.1"
 
 [build-system]
 requires = ["poetry-core"]
