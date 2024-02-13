@@ -8,3 +8,4 @@ __pycache__
 *.whl
 .jupyter*
 *.lancedb
+langchain-examples/
