@@ -9,3 +9,4 @@ __pycache__
 .jupyter*
 *.lancedb
 langchain-examples/
+docs/
