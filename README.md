@@ -1,4 +1,4 @@
-# langchain-book
+# 🦜✨ LangChain-Book
 
 ## 环境安装
 
