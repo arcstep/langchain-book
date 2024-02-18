@@ -44,7 +44,7 @@ docx2txt = "^0.8"
 openpyxl = "^3.1.2"
 langgraph = "^0.0.24"
 playwright = "^1.41.2"
-langchain-chinese = "^0.2.6"
+langchain-chinese = "^0.2.7"
 
 [build-system]
 requires = ["poetry-core"]
