@@ -2331,17 +2331,16 @@ text-helpers = ["chardet (>=5.1.0,<6.0.0)"]
 
 [[package]]
 name = "langchain-chinese"
-version = "0.1.0"
+version = "0.2.6"
 description = "prepare some firendly tool for Chinese LLMs and langchain"
 optional = false
 python-versions = ">=3.9,<4.0"
 files = [
-    {file = "langchain_chinese-0.1.0-py3-none-any.whl", hash = "sha256:913076df56dc9dadf025e3ce8f1e4cb9fbcceb6928f0f4a197d54c60a431490d"},
-    {file = "langchain_chinese-0.1.0.tar.gz", hash = "sha256:479d6f8d23be69f838cff5f04f7c76657cf8e286c6909b9ada97cd5c6b28e361"},
+    {file = "langchain_chinese-0.2.6-py3-none-any.whl", hash = "sha256:446e7e401a8bf5469de1a885d50fabefa6adb0a25829f4e52912dedea429e52e"},
+    {file = "langchain_chinese-0.2.6.tar.gz", hash = "sha256:d025ca732d33496e510b2eefa85ddb9f9aa5fab015de281b5c05c880dfc86b18"},
 ]
 
 [package.dependencies]
-setuptools = ">=69.1.0,<70.0.0"
 zhipu = ">=1.0.1,<2.0.0"
 
 [[package]]
@@ -7080,4 +7079,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.12"
-content-hash = "ec26b8d91bd3fa3f5dc7e9b61aa8666110d30381cd4b572fa75c013b65fb5cc2"
+content-hash = "5e576ba2267cd234087fd318251ceece4808cabfdf7b7acfb339c1038e6ae2ec"
