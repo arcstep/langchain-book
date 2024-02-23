@@ -2319,17 +2319,17 @@ text-helpers = ["chardet (>=5.1.0,<6.0.0)"]
 
 [[package]]
 name = "langchain-chinese"
-version = "0.2.9"
+version = "0.2.10"
 description = "Prepare some firendly tool for Chinese LLMs and langchain"
 optional = false
 python-versions = ">=3.9,<4.0"
 files = [
-    {file = "langchain_chinese-0.2.9-py3-none-any.whl", hash = "sha256:c0fc3b86adbfe869f6878bbfb0b81e5da4945e42c17bacb5e92f04776200239e"},
-    {file = "langchain_chinese-0.2.9.tar.gz", hash = "sha256:5c886b9d99d96003519aa90b113ee97e2e430f82e8f727bb29e4a1d9edd6f79f"},
+    {file = "langchain_chinese-0.2.10-py3-none-any.whl", hash = "sha256:db87565c9a065b2cc1c15f676e583e91baf059b641556f640bb71c2e154d88e2"},
+    {file = "langchain_chinese-0.2.10.tar.gz", hash = "sha256:5910c699b2a4081b93ec3894397456c5e3dd342638e1789bc219b059700880e7"},
 ]
 
 [package.dependencies]
-zhipuai_pydantic_v1 = ">=2.0.1,<3.0.0"
+zhipuai_pydantic_v1 = ">=2.0.2,<3.0.0"
 
 [[package]]
 name = "langchain-cli"
@@ -6937,19 +6937,19 @@ multidict = ">=4.0"
 
 [[package]]
 name = "zhipuai-pydantic-v1"
-version = "2.0.1"
+version = "2.0.2"
 description = "dowgrade v1 for langchain (zhipu is an SDK library for accessing big model apis from ZhipuAI)"
 optional = false
 python-versions = ">=3.9,<4.0"
 files = [
-    {file = "zhipuai_pydantic_v1-2.0.1-py3-none-any.whl", hash = "sha256:1c65a2dc5112fc92e9a3500ca440ee1619c42280922ff97213eb52fff15acd60"},
-    {file = "zhipuai_pydantic_v1-2.0.1.tar.gz", hash = "sha256:681afef34535b06857f3c387a2ce3efee97b74ab0d49c0f6a52f1e7e6b658189"},
+    {file = "zhipuai_pydantic_v1-2.0.2-py3-none-any.whl", hash = "sha256:446c9e157b2ad28a6f2618729bddd3241b7daa787136e2897083aa44aff742e7"},
+    {file = "zhipuai_pydantic_v1-2.0.2.tar.gz", hash = "sha256:8233e0b12242017a8e84c713d91159c596c5e5bd6fd9a4d37d1891330742b105"},
 ]
 
 [package.dependencies]
 cachetools = "4.2.2"
 httpx = ">=0.23.0,<0.24.0"
-pydantic = "1.10.13"
+pydantic = ">=1,<3"
 pyjwt = ">=2.8.0,<3.0.0"
 
 [[package]]
@@ -6970,4 +6970,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.12"
-content-hash = "6d8e4e31922d7d964d7fa5ba5794418bb10c22ea4d359676898b561473228e6f"
+content-hash = "133695cad953508cc9d217aedd2e7f4f5435be4cb62fa754c038385c52e1426c"
