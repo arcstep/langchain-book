@@ -280,6 +280,19 @@ files = [
 ]
 
 [[package]]
+name = "asyncio"
+version = "3.4.3"
+description = "reference implementation of PEP 3156"
+optional = false
+python-versions = "*"
+files = [
+    {file = "asyncio-3.4.3-cp33-none-win32.whl", hash = "sha256:b62c9157d36187eca799c378e572c969f0da87cd5fc42ca372d92cdb06e7e1de"},
+    {file = "asyncio-3.4.3-cp33-none-win_amd64.whl", hash = "sha256:c46a87b48213d7464f22d9a497b9eef8c1928b68320a2fa94240f969f6fec08c"},
+    {file = "asyncio-3.4.3-py3-none-any.whl", hash = "sha256:c4d18b22701821de07bd6aea8b53d21449ec0ec5680645e5317062ea21817d2d"},
+    {file = "asyncio-3.4.3.tar.gz", hash = "sha256:83360ff8bc97980e4ff25c964c7bd3923d333d177aa4f7fb736b019f26c7cb41"},
+]
+
+[[package]]
 name = "attrs"
 version = "23.2.0"
 description = "Classes Without Boilerplate"
@@ -2319,17 +2332,19 @@ text-helpers = ["chardet (>=5.1.0,<6.0.0)"]
 
 [[package]]
 name = "langchain-chinese"
-version = "0.2.10"
+version = "0.2.13"
 description = "Prepare some firendly tool for Chinese LLMs and langchain"
 optional = false
 python-versions = ">=3.9,<4.0"
 files = [
-    {file = "langchain_chinese-0.2.10-py3-none-any.whl", hash = "sha256:db87565c9a065b2cc1c15f676e583e91baf059b641556f640bb71c2e154d88e2"},
-    {file = "langchain_chinese-0.2.10.tar.gz", hash = "sha256:5910c699b2a4081b93ec3894397456c5e3dd342638e1789bc219b059700880e7"},
+    {file = "langchain_chinese-0.2.13-py3-none-any.whl", hash = "sha256:52545173a4fd59cbc59e15d4a1995bd16c55bdf9bd0b7f6e383c8e5a3cfd20a6"},
+    {file = "langchain_chinese-0.2.13.tar.gz", hash = "sha256:8f9353342d16f157dc6806d7e8a6446741209aa3708e22f0a554846a8bb36bf1"},
 ]
 
 [package.dependencies]
-zhipuai_pydantic_v1 = ">=2.0.2,<3.0.0"
+asyncio = ">=3.4.3,<4.0.0"
+langchain_zhipu = ">=4.0.9,<5.0.0"
+pydantic = ">=1,<3"
 
 [[package]]
 name = "langchain-cli"
@@ -2433,6 +2448,24 @@ langchain-core = ">=0.1.16,<0.2"
 numpy = ">=1,<2"
 openai = ">=1.10.0,<2.0.0"
 tiktoken = ">=0.5.2,<0.6.0"
+
+[[package]]
+name = "langchain-zhipu"
+version = "4.0.9"
+description = "将智谱AI集成到LangChain"
+optional = false
+python-versions = ">=3.9,<4.0"
+files = [
+    {file = "langchain_zhipu-4.0.9-py3-none-any.whl", hash = "sha256:92af54874163f66b12c7210f52e40c6450d9b60bb6d47b3873ae7248321de96c"},
+    {file = "langchain_zhipu-4.0.9.tar.gz", hash = "sha256:a97dd4cf20c3f31ca4ba05d23c9a2a4965a91afdd51e367714405aabf559fc4b"},
+]
+
+[package.dependencies]
+cachetools = "4.2.2"
+httpx = ">=0.23.0,<0.24.0"
+langchain = ">=0.1.0,<0.2.0"
+pydantic = ">=1,<3"
+pyjwt = ">=2.8.0,<3.0.0"
 
 [[package]]
 name = "langchainhub"
@@ -6936,23 +6969,6 @@ idna = ">=2.0"
 multidict = ">=4.0"
 
 [[package]]
-name = "zhipuai-pydantic-v1"
-version = "2.0.2"
-description = "dowgrade v1 for langchain (zhipu is an SDK library for accessing big model apis from ZhipuAI)"
-optional = false
-python-versions = ">=3.9,<4.0"
-files = [
-    {file = "zhipuai_pydantic_v1-2.0.2-py3-none-any.whl", hash = "sha256:446c9e157b2ad28a6f2618729bddd3241b7daa787136e2897083aa44aff742e7"},
-    {file = "zhipuai_pydantic_v1-2.0.2.tar.gz", hash = "sha256:8233e0b12242017a8e84c713d91159c596c5e5bd6fd9a4d37d1891330742b105"},
-]
-
-[package.dependencies]
-cachetools = "4.2.2"
-httpx = ">=0.23.0,<0.24.0"
-pydantic = ">=1,<3"
-pyjwt = ">=2.8.0,<3.0.0"
-
-[[package]]
 name = "zipp"
 version = "3.17.0"
 description = "Backport of pathlib-compatible object wrapper for zip files"
@@ -6970,4 +6986,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.12"
-content-hash = "133695cad953508cc9d217aedd2e7f4f5435be4cb62fa754c038385c52e1426c"
+content-hash = "b1f9886bb1f54a4bb44a86a382d69e857c48ef6b9b4c160deb6b3a733e62343f"
