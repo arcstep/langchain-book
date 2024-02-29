@@ -44,6 +44,7 @@ langgraph = "^0.0.24"
 playwright = "^1.41.2"
 langchain-chinese = "^0.2.13"
 langchainhub = "^0.1.14"
+faiss-cpu = "^1.7.4"
 
 [build-system]
 requires = ["poetry-core"]
