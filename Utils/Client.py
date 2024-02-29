@@ -15,7 +15,11 @@ def print_content(data):
 
 #
 from langserve import RemoteRunnable
-def remote_runnable(runnable, params = [], base_url = os.getenv("RUNNABLE_BASE_URL"), debug=os.getenv("DEBUG_MODE")):
+def remote_runnable(
+    runnable, params = [],
+    base_url = os.getenv("RUNNABLE_BASE_URL"),
+    debug=os.getenv("DEBUG_MODE")
+):
     chain = RemoteRunnable(f"{base_url}/{runnable}")
     def ask(*args):
         kwargs = dict(zip(params, args))
