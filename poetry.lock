@@ -3089,6 +3089,62 @@ files = [
 ]
 
 [[package]]
+name = "xeus-python"
+version = "0.15.12"
+description = "A wheel for xeus-python"
+optional = false
+python-versions = "*"
+files = [
+    {file = "xeus_python-0.15.12-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:03c8f712986e4a52912182dfb7acfea07d9fe27a8bfe09ad3c769b21953cdbdd"},
+    {file = "xeus_python-0.15.12-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:b3b6f628952b3b7cf21b330411c52ba7b015eadf66835325af0d56caa6074692"},
+    {file = "xeus_python-0.15.12-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:33ebf3674f8a13fce4945bbc41d09cc692f5e949a6067b4102acb6d11f2f9ef0"},
+    {file = "xeus_python-0.15.12-cp310-cp310-win_amd64.whl", hash = "sha256:a4d04219d22929a902211b9ea80888ba552221f4c52985420fbf959ec0cab5ca"},
+    {file = "xeus_python-0.15.12-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:a40031276c137d21314d895d5841280176bb11b74e44a9facee3e991fc657c24"},
+    {file = "xeus_python-0.15.12-cp311-cp311-macosx_11_0_x86_64.whl", hash = "sha256:fc94632bcd0adc6a8fcdea0ad6af862074ee36c28d171a8d33dff7e795188185"},
+    {file = "xeus_python-0.15.12-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:99874ffc0b132fcac6c9def72f2a5405f7de86bb34673dba7f570d499485a828"},
+    {file = "xeus_python-0.15.12-cp311-cp311-win_amd64.whl", hash = "sha256:fc14e259a196e3af1b32eb49bb50d490f1dcf4c372fd5ca3584ad7358449e01e"},
+    {file = "xeus_python-0.15.12-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:2c69298c572ceaefaa1397199624d1ed4a9185409335f377f3d8e74e1375038a"},
+    {file = "xeus_python-0.15.12-cp312-cp312-macosx_11_0_x86_64.whl", hash = "sha256:749f812026a92d0c32f1ffbbe7b1a75eff623ef898816b930ec9c7c83588943a"},
+    {file = "xeus_python-0.15.12-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b3c0c3779f614472960d703e2760fb4ae152fc3204d50eacfc23cd845583587b"},
+    {file = "xeus_python-0.15.12-cp312-cp312-win_amd64.whl", hash = "sha256:e92e7507ba0752677e2bf0cc104b5247feaec222dc4379d12025dd0340000504"},
+    {file = "xeus_python-0.15.12-cp37-cp37m-macosx_11_0_arm64.whl", hash = "sha256:e4370bf198e0d695c08b38642ed45c581f7b28cfdf2a997699b3164c8b0f7211"},
+    {file = "xeus_python-0.15.12-cp37-cp37m-macosx_11_0_x86_64.whl", hash = "sha256:00416877099f61e28484c4f609912c121b005522b3976e977a8b50c79ebad1d1"},
+    {file = "xeus_python-0.15.12-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:356bea70a92eeda911909707e2af9be9acf816a22c6682af68a284e5912cef02"},
+    {file = "xeus_python-0.15.12-cp37-cp37m-win_amd64.whl", hash = "sha256:af92f6e7ff5d802b8befb575f57a2825f5e54672a69fa08faed3a511e654e793"},
+    {file = "xeus_python-0.15.12-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:7809895ba95590e24d90e405c3e5220147b6e7fda530509d2d95312ce363e5f0"},
+    {file = "xeus_python-0.15.12-cp38-cp38-macosx_11_0_x86_64.whl", hash = "sha256:ad950ff0928cc9d9c519284b067af16896731b4d4681656aa6adc37f1c445352"},
+    {file = "xeus_python-0.15.12-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fcdf0242554d53917cbc0eaec778447486ca9e6b129a4f1af75f4cda013a4cd6"},
+    {file = "xeus_python-0.15.12-cp38-cp38-win_amd64.whl", hash = "sha256:92e736e2d9cee2405eb40c7005edc36cf14f2c0d9bc49d55d204bfbce6a68e5f"},
+    {file = "xeus_python-0.15.12-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:4549635b470bc78a04caec134c8844dd9be7bd08a56455f05215526c351c5575"},
+    {file = "xeus_python-0.15.12-cp39-cp39-macosx_11_0_x86_64.whl", hash = "sha256:b9a19f1d7a618fcbaf2bbba05e706e55fc25e576c56c7399c5065c11722fb5e0"},
+    {file = "xeus_python-0.15.12-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8ec251f8d7f21b2a605918b168a1daca4a3397a8aa716bdeff0e3d98dc1a904e"},
+    {file = "xeus_python-0.15.12-cp39-cp39-win_amd64.whl", hash = "sha256:fd1fa5868e9b0fa488e0082c1b2b57ac1da0e1ae2c3d45f0df01b467609aa20a"},
+]
+
+[package.dependencies]
+pygments = ">=2.3.1,<3"
+xeus-python-shell = {version = ">=0.5,<0.6", extras = ["ipython"]}
+
+[[package]]
+name = "xeus-python-shell"
+version = "0.5.0"
+description = "The xeus-python core python logic."
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "xeus-python-shell-0.5.0.tar.gz", hash = "sha256:848942cec059533d7557c63465b3190618ba3ccd2ecc7f083a4368a20e3d28ef"},
+    {file = "xeus_python_shell-0.5.0-py3-none-any.whl", hash = "sha256:1bca422a62be035f7ef44192ef0967b1e461e03fa8c090b09e71fb65bcf829ea"},
+]
+
+[package.dependencies]
+debugpy = ">=1.1.0,<2"
+ipython = {version = ">=7.21,<9", optional = true, markers = "extra == \"ipython\""}
+
+[package.extras]
+ipython = ["ipython (>=7.21,<9)"]
+wasm = ["pyjs"]
+
+[[package]]
 name = "yarl"
 version = "1.9.4"
 description = "Yet another URL library"
@@ -3194,4 +3250,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.12"
-content-hash = "861ba330266458f8261e62f487a9ba6fdb0b6733e5e0875218ff8669164eec73"
+content-hash = "3e41c6578055624e50d0d281aacebd0c8a33cc6001ee73abe686bedd0fd189fc"
