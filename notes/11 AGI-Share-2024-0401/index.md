@@ -17,3 +17,7 @@
 ## 4、解读 OpenAI 工具回调风格智能体
 ## 5、解读 ReAct 风格智能体
 ## 6、在LCEL框架下重定义《手撕AutoGPT》中的智能体
+
+# （三）再现《手撕AutoGPT》：langchain+智谱+智能体
+## 7、定义工具
+## 8、对比这几个 🦜🔗LangChain 智能体
