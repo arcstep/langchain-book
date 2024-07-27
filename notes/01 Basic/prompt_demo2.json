@@ -1,0 +1,16 @@
+{
+    "name": null,
+    "input_variables": [
+        "language",
+        "topic"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "\u544a\u8bc9\u6211\u4e00\u4e2a\u5173\u4e8e{topic}\u7684\u7b11\u8bdd, \u4e00\u5b9a\u8981\u7279\u522b\u597d\u7b11\n\u4f7f\u7528{language}\u8868\u8ff0",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

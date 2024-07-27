@@ -1,0 +1,13 @@
+{
+    "name": null,
+    "input_variables": [],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "\u4f60\u597d",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
